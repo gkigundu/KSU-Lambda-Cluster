@@ -1,0 +1,27 @@
+# Ksu-lambda machine job file format
+# one pound sign is used for comments
+# four pound signs are used for sections
+#### parameters
+windows=yes
+mac=no
+linux=no
+gpu=any
+output_folder=C:\Users\gkigu\test
+schedule=no
+operating_time=00:00
+day=
+kill=no
+userID=abc
+jobID=abc-123
+#### windows
+# This section will contain commands that can run on a windows command prompt
+
+#py -c "import time; print('Ksu-lambda'); exit()"
+#@echo on
+#echo GRADUATION!!!
+TASKLIST
+
+#### mac
+# This section will contain commands that can run on a mac terminal
+
+#### linux
