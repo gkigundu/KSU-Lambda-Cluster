@@ -1,0 +1,26 @@
+# Ksu-lambda machine job file format
+# one pound sign is used for comments
+# four pound signs are used for sections
+#### parameters
+windows=yes
+mac=yes
+linux=no
+no_queue=no
+gpu=any
+highest_ram=no
+data_folder=C:\Users\gkigu\test
+output_folder=C:\
+wall_time=00:02
+#### windows
+# This section will contain commands that can run on a windows command prompt
+
+cd %lambda%
+'py -c "import time; time.sleep(60); print('Completed')"'
+#windows\MrBayes\mrbayes_x64.exe  mrbayes_execution.txt > mrbayes_output.txt
+
+
+#### mac
+cd $lambda
+# This section will contain commands that can run on a mac terminal
+'python3 -c "import time; time.sleep(60); print('Completed')"'
+#### linux
